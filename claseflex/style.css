@@ -1,0 +1,74 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.nav-header {
+    width: 100%;
+    height: 55px;
+    background-color: aqua;
+    display: inline-block;
+
+}
+
+.logo {
+    display: inline-block;
+}
+
+.nav-list {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+
+}
+
+.nav-menu {
+    list-style: none;
+}
+
+
+li {
+    display: inline-block;
+}
+
+.main {
+    background-color: rgb(37, 170, 11);
+    width: 100%;
+    height: 320px;
+
+}
+
+.aside {
+    background-color: coral;
+    display: inline-block;
+    width: 30%;
+    height: 320px;
+}
+
+.section {
+    background-color: fuchsia;
+    display: inline-block;
+    width: 70%;
+    height: 320px;
+    position: absolute;
+
+}
+
+article {
+    background-color: orangered;
+    margin: 10px 5px;
+    padding: 32px 65px;
+    margin-top: 12px;
+    border-radius: 5px;
+}
+
+.final {
+    background-color: yellowgreen;
+}
+
+.info {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+}
