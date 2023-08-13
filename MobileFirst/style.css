@@ -15,7 +15,7 @@
     --black: #282623;
     --grey: #BABABA;
     --off-white: #FAF8F7;
-    --just-white: #FFFFFF;
+    --just-white: #ffffff;
 }
 
 * {
@@ -75,7 +75,7 @@ header img {
 }
 
 
-/* position absolute toma como referencia a su padre siempre y cuando el padre este posicionado, caso contrario toma al padre mas cercano y si ninguno lo tiene toma como referencia html */
+/* position absolute toma como referencia a su padre siempre y cuando el padre este posicionado como relative, caso contrario toma al padre mas cercano y si ninguno lo tiene toma como referencia html */
 /* 
 left: 0;
 right: 0;       <<<< así se centra divs
@@ -115,7 +115,7 @@ margin: 0 auto; */
 main {
     width: 100%;
     height: auto;
-    background-color: var (--off-white);
+    background-color: var(--off-white);
 }
 
 .main-exchange-container {
@@ -159,4 +159,150 @@ main {
     font-weight: 500;
     line-height: 1.6rem;
     color: #757575;
+}
+
+.main-currency-table {
+    width: 70%;
+    min-width: 235px;
+    max-width: 500px;
+    height: 360px;
+    margin: 0 auto;
+    font-family: "Inter", sans-serif;
+}
+
+.main-currency-table .currency-table--title {
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 2.3rem;
+    color: var(--bitcon-orange);
+}
+
+.currency-table--container {
+    width: 90%;
+    min-width: 230px;
+    max-width: 300px;
+    height: 250px;
+    margin: 0 auto;
+}
+
+.currency-table--container table {
+    width: 100%;
+    height: 100%;
+}
+
+.currency-table--container td {
+    width: 50%;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.9rem;
+    color: var(--grey);
+    background-color: var(--just-white);
+}
+
+.currency-table--container .table__top-left {
+    border-radius: 15px 0 0 0;
+}
+
+.currency-table--container .table__top-rigth {
+    border-radius: 0 15px 0 0;
+}
+
+.currency-table--container .table__botton-left {
+    border-radius: 0 0 0 15px;
+}
+
+.currency-table--container .table__botton-right {
+    border-radius: 0 0 15px 0;
+}
+
+.currency-table--container .table__rigth {
+    font-size: 1.4rem;
+    font-weight: normal;
+    line-height: 1.7rem;
+    color: #757575;
+}
+
+.currency-table--container .down {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+    background: url('./assets/icons/trending-down.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.currency-table--container .up {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+    background: url('./assets/icons/trending-up.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.currency-table--date {
+    width: 190px;
+    height: 30px;
+    margin: 0 auto;
+    margin-top: 15px;
+    padding: 8px;
+    background-color: var(--soft-orange);
+    border-radius: 8px;
+}
+
+.currency-table--date p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.5rem;
+    color: var(--warm-black);
+}
+
+.main-product-detail {
+    position: relative;
+    width: 100%;
+    min-width: 320px;
+    height: auto;
+    padding: 20px 10px;
+    background-color: var(--warm-black);
+}
+
+.product-detail--batata-logo {
+    position: absolute;
+    width: 40px;
+    height: 25px;
+    background: url('./assets/icons/batata.svg');
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: -10px;
+}
+
+.product-detail--title {
+    width: 90%;
+    min-width: 288px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.product-detail--title h2 {
+    margin-bottom: 20px;
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color: var(--just-white);
+}
+
+.product-detail--title p {
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color:
 }
