@@ -6,26 +6,63 @@ $font-stack: 'IBM Plex Sans', sans-serif;
 
 html,
 body {
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
+    background-color: $primary-color;
+    font-family: $font-stack;
 }
 
 nav {
-    background-color: $primary-color;
-    width: 100%;
-    height: 300px;
-    border-color: #7C6A0A;
+    width: auto;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    color: $primary-text-color;
+    padding: 15px;
+
+    p {
+        font-size: 1.5em;
+        padding-left: 30px;
+    }
+
+    .icons {
+        display: flex;
+        gap: 15px;
+
+        button {
+            background: none;
+            border-style: none;
+        }
+    }
 }
 
-main {
-    margin: 0;
-    background-color: $primary-color;
+article {
+    width: auto;
+    color: $primary-text-color;
+    padding-left: 45px;
+    padding-right: 45px;
+    display: flex;
+    background-color: white;
+    justify-content: space-between;
 
+    // .impact-section {
+    //     width: 50%;
+    //     background-color: whitesmoke;
+    // }
+
+    .image-section {
+        // width: 50%;
+        background-color: #FFDAC6;
+
+        img {
+            width: 25vw;
+            border-radius: 19px;
+        }
+    }
 }
 
 footer {
-    background-color: #FA9500;
     width: 100%;
     height: 250px;
 }
