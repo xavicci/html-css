@@ -11,7 +11,9 @@ nav {
   width: auto;
   height: 100px;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   color: #7C6A0A;
   padding: 15px;
 }
@@ -34,11 +36,15 @@ article {
   padding-left: 45px;
   padding-right: 45px;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 article .impact-section {
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
   padding-top: 50px;
   gap: 25px;
 }
@@ -51,10 +57,13 @@ article p {
   font-size: 1.5em;
 }
 article button {
+  background: none;
+  border-style: none;
+}
+article button {
   width: 12vw;
   padding: 20px;
   background-color: #Fa9500;
-  border-style: none;
   border-radius: 35px;
   color: white;
   font-size: 1em;
@@ -65,7 +74,7 @@ article img {
 }
 
 section {
-  width: 100%;
+  width: auto;
   height: auto;
   padding: 60px;
 }
@@ -73,23 +82,61 @@ section h2 {
   color: #7C6A0A;
   font-size: 2em;
 }
-section .healthcare h2 {
+section .healthcare, section .forniture {
+  padding-bottom: 60px;
+}
+section .healthcare h2, section .forniture h2 {
   font-weight: 300;
   padding-bottom: 60px;
 }
-section .healthcare .product-card {
-  width: 10vw;
+section .healthcare .card-section, section .forniture .card-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: auto;
   height: auto;
+  -moz-column-gap: 200px;
+       column-gap: 200px;
+  row-gap: 80px;
+  flex-wrap: wrap;
+}
+section .healthcare .product-card, section .forniture .product-card {
+  width: 14vw;
+  height: 45vh;
   background-color: #FFDAC6;
   color: #7C6A0A;
   padding: 20px;
   border-radius: 8px;
 }
-section .healthcare .product-card img {
-  width: 200px;
-  height: 250px;
-  background-image: cover;
+section .healthcare .product-card .icon, section .forniture .product-card .icon {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 12px;
+}
+section .healthcare .product-card .icon svg path, section .forniture .product-card .icon svg path {
+  width: 28px;
+  height: 28px;
+  stroke: #7C6A0A;
+}
+section .healthcare .product-card .product-image, section .forniture .product-card .product-image {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section .healthcare .product-card .product-image img, section .forniture .product-card .product-image img {
+  width: 12vw;
+  height: 30vh;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 6px;
+}
+section .forniture .product-card {
+  background-color: #BABD8D;
+  color: white;
 }
 
 footer {

@@ -6,6 +6,21 @@ $font-stack: 'IBM Plex Sans', sans-serif;
 $paragraph-size: 1.5em;
 $quaternion-color: #Fa9500;
 
+@mixin flexCenter ($direction, $content, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $content;
+    align-items: $align;
+}
+
+@mixin buttonStyle {
+    button {
+        background: none;
+        border-style: none;
+    }
+}
+
+
 html,
 body {
     margin: 0px;
@@ -18,8 +33,7 @@ body {
 nav {
     width: auto;
     height: 100px;
-    display: flex;
-    justify-content: space-between;
+    @include flexCenter(row, space-between, center);
     color: $primary-text-color;
     padding: 15px;
 
@@ -31,11 +45,7 @@ nav {
     .icons {
         display: flex;
         gap: 15px;
-
-        button {
-            background: none;
-            border-style: none;
-        }
+        @include buttonStyle;
     }
 }
 
@@ -44,12 +54,10 @@ article {
     color: $primary-text-color;
     padding-left: 45px;
     padding-right: 45px;
-    display: flex;
-    justify-content: space-between;
+    @include flexCenter(row, space-between, center);
 
     .impact-section {
-        display: flex;
-        flex-direction: column;
+        @include flexCenter(column, space-evenly, flex-start);
         padding-top: 50px;
         gap: 25px;
     }
@@ -64,11 +72,13 @@ article {
         font-size: $paragraph-size;
     }
 
+    @include buttonStyle;
+
     button {
         width: 12vw;
         padding: 20px;
         background-color: $quaternion-color;
-        border-style: none;
+        // border-style: none;
         border-radius: 35px;
         color: white;
         font-size: 1em;
@@ -81,9 +91,8 @@ article {
 }
 
 section {
-    width: 100%;
-    height: auto;
-    // background-color: pink;
+    width: auto;
+    height: auto; // background-color: pink;
     padding: 60px;
 
     h2 {
@@ -92,25 +101,69 @@ section {
     }
 
     .healthcare {
+        padding-bottom: 60px;
+
         h2 {
             font-weight: 300;
             padding-bottom: 60px;
         }
 
-        .product-card {
-            width: 10vw;
+        .card-section {
+            @include flexCenter(row, space-evenly, center);
+            width: auto;
             height: auto;
+            column-gap: 200px;
+            row-gap: 80px;
+            flex-wrap: wrap;
+        }
+
+        .product-card {
+            width: 14vw;
+            height: 45vh;
             background-color: $secondary-color;
             color: $primary-text-color;
             padding: 20px;
             border-radius: 8px;
 
-            img {
-                width: 200px;
-                height: 250px;
-                background-image: cover;
-                border-radius: 6px;
+            .icon {
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+                padding-bottom: 12px;
+
+                svg path {
+                    width: 28px;
+                    height: 28px;
+                    stroke: #7C6A0A;
+                }
             }
+
+            .product-image {
+                width: 100%;
+                height: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    width: 12vw;
+                    height: 30vh;
+                    object-fit: cover;
+                    border-radius: 6px;
+                }
+            }
+
+        }
+
+    }
+
+    .forniture {
+        @extend .healthcare;
+
+        .product-card {
+            background-color: $tertiary-color;
+            color: white;
+
         }
     }
 }
