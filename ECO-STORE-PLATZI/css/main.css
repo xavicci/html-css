@@ -214,8 +214,17 @@ section .forniture .product-card {
 }
 
 footer {
+  background-color: #Fa9500;
   width: 100%;
   height: auto;
-  background-color: #Fa9500;
+  padding: 40px;
   color: white;
+}
+footer .social-media {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding-bottom: 40px;
 }/*# sourceMappingURL=main.css.map */
