@@ -1,0 +1,8 @@
+Pasos del diseño
+1-Crear el brief para tener claor los objetivos
+2-Crear siteMap para definir la estructura de la app basado en los objetivos del brief
+3-Crear User flow para mapear las tareas mas comunes del usuraio (pasos que tiene que hacer un usuario para realizar una tarea) se pueden crear tantos como sea necesario
+5-Dibujar wireframes de baja fidelidad a mano para modificarlos rápidamente
+6-Crear wireframes de alta fidelidad (dektop, mobile, etc.)
+7-Probar nuestro diseño con colores, tipografías etc. (con ayuda de nuestro Style Guide)
+8-Crear los componentes (en módulos separados para facilitar la reutilización y con variables CSS para cambiar la paleta de colores fácilmente)
