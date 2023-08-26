@@ -35,3 +35,13 @@ Area
 Gutters   | Grid row
 Grid axis |Grid column
           |Grid Axis
+
+
+DISPLAY: 
+- GRID
+- FLEX
+- INLINE GRID
+- INLINE FLEX
+
+Diferencias inline vs block
+![Alt text](image.png)
