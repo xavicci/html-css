@@ -1,4 +1,4 @@
-**overflow:auto**
+https://github.com/platzi/CSS2020#4-contextos-de-formato-formato-de-contexto-de-bloque-bfc
 
 Apuntes de la clase:
 
@@ -68,3 +68,76 @@ Elementos con un valor perspective distinto de none
 Elementos con un valor isolation igual a isolate
 Especifican cualquier atributo superior en will-change incluso si no especificas valores para estos atributos directamente
 Elementos con un valor -webkit-overflow-scrolling igual a touch
+
+
+*********************************************************
+*********************************************************
+*********************************************************
+
+
+<h3>Diferencias entre flexbox y CSS grid</h3>
+Flexbox
+
+Nos ayuda a distribuir los elementos y alinearlos, es unidireccional, eso quiere decir que solo va en un a dirección, va vertical o va en horizontal.
+
+Las propiedades que tiene un contenedor padre en flexbox son:
+
+display
+flex-direction
+flex-wrap
+flex-flow
+justify-content
+align-items
+align-content
+Las propiedades de elementos hijos son:
+
+order
+floex-grow
+flex-shrink
+flex-basis
+flex
+align-self
+Grid
+
+Nos permite alinear elementos en filas y columnas, es bidemensional, podemos alinear elementos en dos direcciones.
+
+Las propiedades de contenedores padre son:
+
+display
+grid-template
+gap
+justify-items
+align-items
+justify-content
+align-content
+Propiedades de elementos hijo
+
+grid-column
+grid-row
+grid-area
+justify-self
+align-self
+
+
+*********************************************************
+*********************************************************
+*********************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
