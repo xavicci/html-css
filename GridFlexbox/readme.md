@@ -1,3 +1,12 @@
+****************************************************************************
+https://www.programandoamedianoche.com/2018/11/efectos-de-textos-con-css/
+https://www.programandoamedianoche.com/2019/09/propiedad-clip-path/
+https://neumorphism.io/#d57b7b
+https://www.smashingmagazine.com/category/javascript/
+https://gridbyexample.com/patterns/
+https://web.dev/one-line-layouts/
+****************************************************************************
+
 https://github.com/platzi/CSS2020#4-contextos-de-formato-formato-de-contexto-de-bloque-bfc
 
 Apuntes de la clase:
