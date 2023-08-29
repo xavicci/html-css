@@ -124,15 +124,30 @@ align-self
 *********************************************************
 
 
+![Alt text](image.png)
 
 
+https://web.dev/one-line-layouts/
+https://gridbyexample.com/resources/
 
+https://cantunsee.space/
 
+https://www.atsistemas.com/es/blog/que-son-tokens-diseno
+https://neumorphism.io/#e0e0e0
 
-
-
-
-
+Tips:
+• Jerarquía
+• Contraste
+• Proximidad
+• Balance
+• Responsive design
+• Ilustraciones animadas
+• Garantizar performance
+• Micro interaciones
+• Realidad aumentada y realidad virtual
+• Neo morfismo
+• Asymmetrical layouts
+• Storytelling
 
 
 
