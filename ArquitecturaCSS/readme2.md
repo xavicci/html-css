@@ -47,7 +47,6 @@ Usa nombres de bloques descriptivos que sean fáciles de entender.
 Usa nombres de elementos descriptivos que sean específicos del bloque.
 Usa nombres de modificadores que sean claros y concisos.
 Evita usar modificadores globales, como disabled o active.
-Usa la metodología BEM de manera consistente en todos tus proyectos.
 
 En REACT NO SE APLICARIA LO MISMO
 

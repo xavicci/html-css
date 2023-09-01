@@ -11,9 +11,97 @@
     <title>Document</title>
 </head>
 
-<body>
-    <p class="font-Montserrat text-xl">HELLO WORLD</p>
-    <div class="w-64 h-64 bg-primary"></div>
+<body class="font-Montserrat">
+    <nav></nav>
+    <div id="tab_bar"></div>
+    <section class="w-full h-screen">
+        <div id="home">
+            <div class="w-full h-3/4">
+                <div class="w-full h-full flex flex-col absolute space-y-96 py-4 items-center ">
+                    <input type="search"
+                        class="outline-none p-3 rounded-full shadow-sm transition duration-300 focus-within:shadow-sm focus:ring-2 focus:w-11/12"
+                        placeholder="San Francisco" name="" id="">
+                    <button
+                        class="w-48 rounded-full text-lg text-primary shadow-sm font-semibold p-4 bg-white transition duration-500 ease-in-out hover:bg-primary hover:text-white hover:-translate-y-1 hover:scale-110">Explorar!</button>
+                </div>
+                <div class="w-full h-full">
+                    <img src="./img/sanFrancisco.jpg" alt="San Francisco City">
+                </div>
+            </div>
+        </div>
+        <div class="p-6" id="recomendados">
+            <p class="text-3xl font-semibold text-primary">Recomendados</p>
+            <div
+                class="w-auto h-72 items-center mt-6 flex overflow-x-auto overscroll-x-contain space-x-4 scrollbar-hide">
+                <div class="Card">
+                    <div class="w-full h-3/5 rounded-t-lg bg-norway bg-cover"></div>
+                    <div class="bg-secondary w-full h-2/5 rounded-b-lg">
+                        <p class="text-white font-bold px-4 py-2">Norway</p>
+                        <p class="text-white text-md px-4">Paisajes Increíbles</p>
+                    </div>
+                </div>
+                <div class="Card">
+                    <div class="w-full h-3/5 rounded-t-lg bg-new_york bg-cover"></div>
+                    <div class="bg-white w-full h-2/5 rounded-b-lg">
+                        <p class="text-terciary font-bold px-4 py-2">New York</p>
+                        <p class="text-terciary text-md px-4">La Gran Manzana</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="px-4 h-full w-full" id="rentas_destacadas">
+            <p class="text-3xl text-primary font-semibold pb-6 mt-4">Rentas Destacadas</p>
+            <div class="flex w-full h-full flex-col space-y-6 items-center justify-center">
+                <div class="w-full h-96 bg-chicago bg-cover rounded-xl">
+                    <p class="CardTitle">Chicago</p>
+                    <p class="text-sm pl-8 text-white mr-24">2 habitaciones, baño y cocina</p>
+                </div>
+                <div class="w-full h-96 bg-chicago bg-cover rounded-xl">
+                    <p class="CardTitle">Chicago</p>
+                    <p class="text-sm pl-8 text-white mr-24">2 habitaciones, baño y cocina</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="w-full h-full mt-8" id="faq">
+            <div class="w-full h-full px-6 flex flex-col space-y-4">
+                <p class="text-3xl text-primary font-semibold mt-6">FAQS.</p>
+                <div>
+                    <p class="text-xl font-medium text-primary">Política de Cancelación</p>
+                    <p class=" text-base pt-2">
+                        Para estancias menores a una semana es importante avisar con 3 días de
+                        anticipación, de caso contario será sancionado.
+                    </p>
+                </div>
+                <div>
+                    <p class="">Métodos de pago</p>
+                    <p class="">
+                        Aceptamos distintos métodos de pago: VISA, MasterCard, American Express,
+                        Paypal y Binance
+                    </p>
+                </div>
+                <div>
+                    <p class="">Mascotas</p>
+                    <p class="">El tema de las mascotas dependerá directamente del anfitrión.</p>
+                </div>
+                <div>
+                    <p class="">Información de Seguridad</p>
+                    <p class="">
+                        Todas nuestras estancias cuentan con seguro en caso de accidentes
+                    </p>
+                </div>
+                <div>
+                    <p class="">Estancias Largas</p>
+                    <p class="">
+                        Contamos con estancias de hasta 3 meses, en este caso es requerido un
+                        anticipo con un monto del 50% del valor de la renta
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <footer></footer>
 </body>
 
 </html>
