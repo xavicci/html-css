@@ -12,6 +12,8 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            text-decoration: dashed;
+            list-style: none;
         }
 
         html {
@@ -24,8 +26,16 @@
             place-items: center;
             width: 100vw;
             height: 100vh;
+            counter-reset: score;
         }
 
+        input:checked{
+            counter-increment: score;
+        }
+
+        .score::after {
+            content: counter(score);
+        }
 
         .phone {
             position: relative;
@@ -46,6 +56,38 @@
             /* background: grey; */
             bottom: 0;
             left: 20%;
+
+            animation-name: layer;
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            animation-delay: 0.5s;
+        }
+
+        @keyframes layer {
+            0% {
+                bottom: 0;
+            }
+
+            25% {
+                bottom: -70px;
+            }
+
+            100% {
+                bottom: 0;
+            }
+        }
+
+        .layer-1 input[type=checkbox],
+        .layer-2 input[type=checkbox],
+        .layer-4 input[type=checkbox],
+        .layer-6 input[type=checkbox] {
+        position: absolute;
+        appearance: none;
+        cursor: pointer;
+        z-index: 1;
+        width: 100%;
+        height: 80px;
         }
 
         .layer-2 {
@@ -58,6 +100,12 @@
             /* background: grey; */
             bottom: 0;
             right: 20%;
+
+            animation-name: layer;
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            animation-delay: 0.7s;
         }
 
         .layer-3 {
@@ -111,6 +159,12 @@
             /* background: grey; */
             bottom: 0;
             left: 5%;
+
+            animation-name: layer;
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            animation-delay: 0.1s;
         }
 
         .layer-5 {
@@ -133,6 +187,11 @@
             /* background: grey; */
             bottom: 0;
             right: 8%;
+
+            animation-name: layer;
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
         }
 
         .layer-7 {
@@ -300,11 +359,30 @@
         .head__eye {
             position: absolute;
             border-radius: 100%;
-            width: 8px;
-            height: 8px;
-            background: lightblue;
-            box-shadow: inset 0 0 0 2px black;
-            top: 25%;
+            width: 5px;
+            height: 5px;
+            background: grey;
+            top: 9%;
+
+            animation-name: blink;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes blink {
+            0% {
+                height: 5px;
+            }
+
+            5% {
+                transform: translate(0px, 2px);
+                height: 1px;
+            }
+
+            10% {
+                transform: translate(0px, 0px);
+                height: 4px;
+            }
         }
 
         .head__eye-left {
@@ -320,6 +398,7 @@
 <body>
     <div class="phone">
         <div class="layer-1">
+            <input type="checkbox">
             <div class="left-ear--outer">
                 <div class="left-ear--inner"></div>
             </div>
@@ -332,6 +411,7 @@
             </div>
         </div>
         <div class="layer-2">
+            <input type="checkbox">
             <div class="left-ear--outer">
                 <div class="left-ear--inner"></div>
             </div>
@@ -347,6 +427,7 @@
             <div class="capaVerde"></div>
         </div>
         <div class="layer-4">
+            <input type="checkbox">
             <div class="left-ear--outer">
                 <div class="left-ear--inner"></div>
             </div>
@@ -362,6 +443,7 @@
             <div class="capaVerde"></div>
         </div>
         <div class="layer-6">
+            <input type="checkbox">
             <div class="left-ear--outer">
                 <div class="left-ear--inner"></div>
             </div>
@@ -381,6 +463,7 @@
         </div>
         <div class="layer-9"></div>
         <div class="layer-10"></div>
+        <div class="score">Score:</div>
     </div>
 </body>
 
