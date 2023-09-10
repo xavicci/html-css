@@ -1,0 +1,57 @@
+function encryption(s) {
+    // Write your code here
+    const lengthArray = s.length;
+    const number = Math.sqrt(lengthArray);
+    var numberFloor = Math.floor(number);
+    const numberCeil = Math.ceil(number);
+    var separate = [];
+    var separateLength =[];
+    var encryption =[];
+    var count=0;
+    var encryption =[...s];
+   
+    if (numberFloor * numberCeil <lengthArray){
+        numberFloor +=1;
+    }
+    
+    if (numberFloor * numberCeil >lengthArray){
+        
+        var amountArray =numberFloor*numberCeil;
+        var amountArray = amountArray-lengthArray;
+        
+        for (let i=0;i<amountArray;i++){
+            encryption.push("0");
+        }
+    }
+    
+    for (let i =0 ; i<encryption.length;i++){
+        
+        separate.push(encryption[i]);
+        count++;
+        if (numberCeil ===count){
+            separateLength.push(separate);
+            separate=[];
+            count =0;
+        }
+    }
+    
+    encryption =[];
+    
+    for (let i=0; i<numberFloor;i++){
+        
+        for (let y=0; y<numberCeil-1;y++){
+             
+                separate.push(separateLength[y][i]);
+                count++;
+                if (numberFloor ===count){
+                    encryption.push(separate);
+                    separate=[];
+                    count =0;
+                }
+            
+        }
+    }
+    
+    console.log(numberFloor,numberCeil,separateLength,encryption);
+
+}

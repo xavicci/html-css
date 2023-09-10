@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./main.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+
+        body {
+            background: #fff;
+            display: grid;
+            place-items: center;
+            width: 100vw;
+            height: 100vh;
+        }
+
+
+        .phone {
+            position: relative;
+            border: 8px solid black;
+            border-radius: 20px;
+            width: 60%;
+            height: 80%;
+            background: rgb(159, 185, 252);
+            box-shadow: 10px 12px 10px 0px rgba(0, 0, 0, 0.5);
+
+        }
+
+        .layer-1 {
+            position: absolute;
+            z-index: 1;
+            width: 70px;
+            height: 80%;
+            /* background: grey; */
+            bottom: 0;
+            left: 20%;
+        }
+
+        .layer-2 {
+            position: absolute;
+            z-index: 2;
+            position: absolute;
+            z-index: 1;
+            width: 70px;
+            height: 80%;
+            /* background: grey; */
+            bottom: 0;
+            right: 20%;
+        }
+
+        .layer-3 {
+            position: absolute;
+            z-index: 3;
+            width: 80%;
+            height: 70%;
+            background: #BB6D50;
+            border-radius: 20px;
+            /* 67A167 
+    A2533A*/
+            bottom: 0;
+            left: 10%;
+        }
+
+        .capaVerde:after {
+            content: "";
+            width: 100%;
+            height: 20px;
+            position: absolute;
+            top: 0;
+            height: 30px;
+            background: linear-gradient(135deg, #67A167 25%, transparent 25%) -50px 0,
+                linear-gradient(-135deg, #67A167 25%, transparent 25%) -50px 0,
+                linear-gradient(45deg, #67A167 25%, transparent 25%),
+                linear-gradient(-45deg, #67A167 25%, transparent 25%);
+            background-size: 30px 80px;
+            border-radius: 20px;
+        }
+
+        .capaVerde::before {
+            content: "";
+            position: absolute;
+            /* left: -0px; */
+            top: 15px;
+            width: 100%;
+            height: 40px;
+            background: linear-gradient(135deg, #a6543d 25%, transparent 25%) -50px 0,
+                linear-gradient(-135deg, #a6543d 25%, transparent 25%) -50px 0,
+                linear-gradient(45deg, #a6543d 25%, transparent 25%),
+                linear-gradient(-45deg, #a6543d 25%, transparent 25%);
+            background-size: 30px 100px;
+            background-position: 140px 0 0 30px 0;
+        }
+
+        .layer-4 {
+            position: absolute;
+            z-index: 4;
+            width: 70px;
+            height: 60%;
+            /* background: grey; */
+            bottom: 0;
+            left: 5%;
+        }
+
+        .layer-5 {
+            position: absolute;
+            z-index: 5;
+            width: 70%;
+            height: 50%;
+            background: #BB6D50;
+            border-radius: 20px;
+            box-shadow: 5px 0px 10px 0 rgba(0, 0, 0, 0.5);
+            bottom: 0;
+            left: 0;
+        }
+
+        .layer-6 {
+            position: absolute;
+            z-index: 6;
+            width: 70px;
+            height: 40%;
+            /* background: grey; */
+            bottom: 0;
+            right: 8%;
+        }
+
+        .layer-7 {
+            position: absolute;
+            z-index: 7;
+            width: 55%;
+            height: 30%;
+            background: #BB6D50;
+            border-radius: 20px;
+            box-shadow: -5px 0px 10px 0 rgba(0, 0, 0, 0.5);
+            bottom: 0;
+            right: 0;
+        }
+
+        .layer-8 {
+            position: absolute;
+            z-index: 8;
+            width: 60%;
+            height: 20%;
+            bottom: 0;
+            right: 20%;
+        }
+
+        .layer-8::before {
+            position: absolute;
+            content: "";
+            width: 40%;
+            height: 70%;
+            bottom: 0;
+            left: 0;
+            background: #67A167;
+            border-radius: 100px 100px 10px 20px;
+        }
+
+        .layer-8::after {
+            position: absolute;
+            content: "";
+            width: 40%;
+            height: 70%;
+            bottom: 0;
+            right: 0;
+            background: #67A167;
+            border-radius: 100px 100px 10px 20px;
+        }
+
+        .grass {
+            position: absolute;
+            width: 40%;
+            height: 90%;
+            bottom: 0;
+            left: 30%;
+            background: #67A167;
+            border-radius: 100px 100px 10px 20px;
+        }
+
+        .layer-9 {
+            position: absolute;
+            z-index: 9;
+            width: 40%;
+            height: 17%;
+            /* background: rosybrown; */
+            bottom: 0;
+            left: 0%;
+        }
+
+        .layer-9::before {
+            position: absolute;
+            content: "";
+            width: 75%;
+            height: 100%;
+            background: white;
+            border-radius: 100px 100px 10px 20px;
+        }
+
+        .layer-9::after {
+            position: absolute;
+            content: "";
+            width: 80%;
+            height: 60%;
+            bottom: 0;
+            right: 0;
+            background: white;
+            border-radius: 100px;
+        }
+
+        .layer-10 {
+            position: absolute;
+            z-index: 10;
+            width: 40%;
+            height: 17%;
+            bottom: 0;
+            right: 0;
+        }
+
+        .layer-10::before {
+            position: absolute;
+            content: "";
+            width: 75%;
+            height: 100%;
+            right: 0;
+            background: white;
+            border-radius: 100px 100px 30px 20px;
+        }
+
+        .layer-10::after {
+            position: absolute;
+            content: "";
+            width: 80%;
+            height: 60%;
+            bottom: 0;
+            left: 0;
+            background: white;
+            border-radius: 100px;
+        }
+
+        .left-ear--outer {
+            position: absolute;
+            display: inline-block;
+            background: white;
+            border-radius: 90%;
+            width: 20px;
+            height: 50px;
+            left: 15%;
+        }
+
+        .left-ear--inner {
+            position: absolute;
+            background: rosybrown;
+            border-radius: 90%;
+            width: 10px;
+            height: 25px;
+            left: 5px;
+            top: 5px;
+        }
+
+        .right-ear--outer {
+            position: absolute;
+            display: inline-block;
+            background: white;
+            border-radius: 90%;
+            width: 20px;
+            height: 50px;
+            right: 15%;
+        }
+
+        .right-ear--inner {
+            position: absolute;
+            background: rosybrown;
+            border-radius: 90%;
+            width: 10px;
+            height: 25px;
+            left: 5px;
+            top: 5px;
+        }
+
+        .head {
+            position: absolute;
+            background: white;
+            border-radius: 90%;
+            width: 100%;
+            height: 50px;
+            top: 25px;
+        }
+
+        .head__eye {
+            position: absolute;
+            border-radius: 100%;
+            width: 8px;
+            height: 8px;
+            background: lightblue;
+            box-shadow: inset 0 0 0 2px black;
+            top: 25%;
+        }
+
+        .head__eye-left {
+            left: 30%;
+        }
+
+        .head__eye-right {
+            right: 30%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="phone">
+        <div class="layer-1">
+            <div class="left-ear--outer">
+                <div class="left-ear--inner"></div>
+            </div>
+            <div class="right-ear--outer">
+                <div class="right-ear--inner"></div>
+            </div>
+            <div class="head">
+                <div class="head__eye head__eye-left"></div>
+                <div class="head__eye head__eye-right"></div>
+            </div>
+        </div>
+        <div class="layer-2">
+            <div class="left-ear--outer">
+                <div class="left-ear--inner"></div>
+            </div>
+            <div class="right-ear--outer">
+                <div class="right-ear--inner"></div>
+            </div>
+            <div class="head">
+                <div class="head__eye head__eye-left"></div>
+                <div class="head__eye head__eye-right"></div>
+            </div>
+        </div>
+        <div class="layer-3">
+            <div class="capaVerde"></div>
+        </div>
+        <div class="layer-4">
+            <div class="left-ear--outer">
+                <div class="left-ear--inner"></div>
+            </div>
+            <div class="right-ear--outer">
+                <div class="right-ear--inner"></div>
+            </div>
+            <div class="head">
+                <div class="head__eye head__eye-left"></div>
+                <div class="head__eye head__eye-right"></div>
+            </div>
+        </div>
+        <div class="layer-5">
+            <div class="capaVerde"></div>
+        </div>
+        <div class="layer-6">
+            <div class="left-ear--outer">
+                <div class="left-ear--inner"></div>
+            </div>
+            <div class="right-ear--outer">
+                <div class="right-ear--inner"></div>
+            </div>
+            <div class="head">
+                <div class="head__eye head__eye-left"></div>
+                <div class="head__eye head__eye-right"></div>
+            </div>
+        </div>
+        <div class="layer-7">
+            <div class="capaVerde"></div>
+        </div>
+        <div class="layer-8">
+            <div class="grass"></div>
+        </div>
+        <div class="layer-9"></div>
+        <div class="layer-10"></div>
+    </div>
+</body>
+
+</html>
